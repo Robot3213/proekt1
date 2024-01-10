@@ -38,7 +38,7 @@ str.length - и получить её длину)
 4) Потренироваться и переписать цикл еще двумя способами*/
 
 
-/*'use strict';
+'use strict';
 
 const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
@@ -89,4 +89,4 @@ if(personalMovieDB.count < 10) {
     console.log("Произошла ошибка");
 }
 
-console.log(personalMovieDB);*/
+console.log(personalMovieDB);
