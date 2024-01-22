@@ -76,3 +76,117 @@ function getCoupeNumber(vagon) {
     console.log(Math.ceil(vagon / 4));
 }
 getCoupeNumber(5);
+
+//1) Создайте функцию, которая принимает в себя целое число минут и возвращает время в нужном формате строки. (Смотри пример). Обратите внимание на окончание слова "час" - оно меняется в зависимости от цифры. Если вместо аргумента приходит не число, дробное или отрицательное число - функция возвращает строку "Ошибка, проверьте данные"
+//Пример:
+//getTimeFromMinutes(150) => "Это 2 часа и 30 минут"
+//getTimeFromMinutes(50) => "Это 0 часов и 50 минут"
+//getTimeFromMinutes(0) => "Это 0 часов и 0 минут"
+//getTimeFromMinutes(-150) => "Ошибка, проверьте данные"
+
+// Место для первой задачи
+function getTimeFromMinutes(minutesTotal) {
+    if (typeof(minutesTotal) !== 'number' || minutesTotal < 0 || !Number.isInteger(minutesTotal)){
+        console.log("Ошибка. Проверьте правильность введенного номера места");
+    }
+
+    const hours = Math.floor(minutesTotal / 60);
+    const minutes = minutesTotal % 60;
+
+    let hoursStr = 0;
+    switch (hoursStr) {
+        case 0: 
+            hoursStr = 'часов';
+            break;
+        case 1:
+            hoursStr = 'час';
+            break;
+        case 2:
+        case 3:
+        case 4:
+            hoursStr = 'часа';
+            break;
+        default:
+            hoursStr = 'часов';
+    }
+
+    console.log(`Это ${hours} ${hoursStr} и ${minutes} минут`)
+}
+getTimeFromMinutes(395)
+
+// 2) Напишите функцию, которая принимает в себя 4 числа и возвращает самое большее из них. Если один из аргументов не является числом или их меньше 4 - возвращается 0. Дробные числа разрешены.
+
+// Пример:
+
+// findMaxNumber(1, 5, 6.6, 11); =>  11
+
+// findMaxNumber(1, 5, '6', '10');  =>  0
+// Место для второй задачи
+function findMaxNumber(a, b, c, d) {
+    if (typeof(a) !== 'number' || typeof(b) !== 'number' ||typeof(c) !== 'number' ||typeof(d) !== 'number') {
+        console.log('0');
+    }else{
+        console.log(Math.max (a,b,c,d));
+    }
+}
+findMaxNumber(1, 66, 11);
+
+
+
+
+// Создайте пустой объект user.
+// Добавьте свойство name со значением John.
+// Добавьте свойство surname со значением Smith.
+// Измените значение свойства name на Pete.
+// Удалите свойство name из объекта.
+
+let user = {
+    name: john,
+    surname: Smith, 
+}
+user.name = Pete;
+delete(user.name)
+
+// Напишите код для суммирования всех зарплат и сохраните результат в переменной sum
+let salaries = {
+    John: 100,
+    Ann: 160,
+    Pete: 130
+  };
+
+  let j = 0;
+  for(let key in salaries){
+    key += salaries[i];
+  }
+  console.log(key);
+
+
+//Создайте функцию multiplyNumeric(obj), которая умножает все числовые свойства объекта obj на 2
+
+function multiplyNumeric(obj) {
+    obj = 400,
+    val = 250,
+    huma = "gari"
+}
+// for(let key in obj){
+//     if(typeof(obj[key] == "number")){
+//         obj[key] * 2;
+//     }else{
+//         console.log('You are gay')
+//     } 
+//     console.log(obj[key])
+// }
+
+function multiplyNumeric(obj) {
+    for (let key in obj) {
+      if (typeof obj[key] == 'number') {
+        obj[key] *= 2;
+      }
+    }
+  }
+  multiplyNumeric(obj);
+
+  const a=[1,2,3];
+  const b=[1,2,3];
+
+  console.log(a===b);
